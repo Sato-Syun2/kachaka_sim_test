@@ -3,8 +3,8 @@ yield_node:
     # エージェントの基本性能
     robot_max_speed: 0.5
     human_max_speed: 1.2
-    tau: 0.5                # 0.2から0.5に変更(滑らかな加速)
-    human_size: 0.25        # 0.5から0.25に変更(現実的な肩幅)
+    tau: 0.2                
+    human_size: 0.5
     robot_size: 0.25
 
     # 古典的SFM（絶対バリア）
@@ -14,7 +14,7 @@ yield_node:
     # TTC（予測回避）
     T_c_limit: 5.0
     A_cp: 3.0
-    B_cp: 2.0               # 1.5から2.0に変更(早めに避ける)
+    B_cp: 2.0 
     d_safe: 0.5
 
     # 力のブレンド重み

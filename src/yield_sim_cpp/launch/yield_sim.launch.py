@@ -7,6 +7,7 @@ def generate_launch_description():
     # パッケージのパスとrvizファイルのパスを取得
     package_dir = get_package_share_directory('yield_sim_cpp')
     rviz_config_file = os.path.join(package_dir, 'rviz', 'yield_sim.rviz')
+    params_file = os.path.join(package_dir, 'config', 'param_config.yaml')
 
     return LaunchDescription([
         # シミュレーションノードの起動
@@ -14,6 +15,7 @@ def generate_launch_description():
             package='yield_sim_cpp',
             executable='yield_node',
             name='yield_node',
+            parameters=[params_file],
             output='screen'
         ),
         # 保存した設定ファイルを読み込んでRViz2を起動

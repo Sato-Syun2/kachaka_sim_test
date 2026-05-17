@@ -12,7 +12,12 @@ ament_auto_find_build_dependencies()
 
 ament_auto_add_executable(yield_node src/yield_node.cpp)
 
-install(DIRECTORY launch rviz
+install(PROGRAMS 
+  scripts/optimizer_node.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY launch rviz config
   DESTINATION share/${PROJECT_NAME}
 )
 
