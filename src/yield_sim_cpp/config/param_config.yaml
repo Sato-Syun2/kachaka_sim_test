@@ -1,5 +1,6 @@
 yield_node:
   ros__parameters:
+    fast_mode: true
     # エージェントの基本性能
     robot_max_speed: 0.5
     human_max_speed: 1.2
@@ -8,22 +9,22 @@ yield_node:
     robot_size: 0.25
 
     # 古典的SFM（絶対バリア）
-    A_classic: 1.6
-    B_classic: 1.0
+    A_classic: 2.14
+    B_classic: 0.43
 
     # TTC（予測回避）
-    T_c_limit: 5.0
-    A_cp: 3.0
-    B_cp: 2.0 
+    T_c_limit: 2.0
+    A_cp: 1.55
+    B_cp: 2.78
     d_safe: 0.5
 
     # 力のブレンド重み
-    weight_rep: 0.5
-    weight_oss: 1.5
+    weight_rep: 1.0
+    weight_oss: 1.0
 
     # 壁のパラメーター
-    A_wall: 5.0
-    B_wall: 0.5
+    A_wall: 7.74
+    B_wall: 0.38
     wall_left_x: -1.25
     wall_right_x: 1.25
 
