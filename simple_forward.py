@@ -14,7 +14,7 @@ class SimpleForwarder(Node):
 
     def timer_callback(self):
         msg = Twist()
-        msg.linear.x = 0.2  # 秒速0.2m (時速0.72km) の低速
+        msg.linear.x = -0.2  # 秒速0.2m (時速0.72km) の低速
         msg.angular.z = 0.0 # 回転なし
         self.publisher_.publish(msg)
 

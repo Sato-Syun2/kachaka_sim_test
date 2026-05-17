@@ -1,0 +1,31 @@
+yield_node:
+  ros__parameters:
+    # エージェントの基本性能
+    robot_max_speed: 0.5
+    human_max_speed: 1.2
+    tau: 0.5                # 0.2から0.5に変更(滑らかな加速)
+    human_size: 0.25        # 0.5から0.25に変更(現実的な肩幅)
+    robot_size: 0.25
+
+    # 古典的SFM（絶対バリア）
+    A_classic: 1.6
+    B_classic: 1.0
+
+    # TTC（予測回避）
+    T_c_limit: 5.0
+    A_cp: 3.0
+    B_cp: 2.0               # 1.5から2.0に変更(早めに避ける)
+    d_safe: 0.5
+
+    # 力のブレンド重み
+    weight_rep: 0.5
+    weight_oss: 1.5
+
+    # 壁のパラメーター
+    A_wall: 5.0
+    B_wall: 0.5
+    wall_left_x: -1.25
+    wall_right_x: 1.25
+
+    # シチュエーション (0: front, 1: back)
+    situation_id: 1
